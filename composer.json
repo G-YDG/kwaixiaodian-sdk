@@ -1,0 +1,39 @@
+{
+    "name": "ydg/kwaixiaodian-sdk",
+    "description": "Easier to create a sdk",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "sdk",
+        "kwai",
+        "kwaixiaodian",
+        "kwaixiaodian-sdk"
+    ],
+    "require": {
+        "php": "^7.0|^8.0",
+        "ydg/foudation-sdk": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.12",
+        "phpunit/phpunit": "^9.5",
+        "vlucas/phpdotenv": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ydg\\KwaixiaodianSdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YdgTest\\KwaixiaodianSdk\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cs-fix": "php-cs-fixer fix ."
+    }
+}
