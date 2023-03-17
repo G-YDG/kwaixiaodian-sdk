@@ -38,6 +38,7 @@ class DistributionTest extends AbstractTest
             'page' => 1,
             'pageSize' => 1,
         ]);
+        $this->isSuccessResponse($pidListResult);
         $pid = $pidListResult['data']['cpsPidData'][0];
 
         $itemListResult = $app->distribution->openDistributionCpsKwaimoneySelectionItemList([
@@ -45,6 +46,7 @@ class DistributionTest extends AbstractTest
             'pageSize' => 1,
             'planType' => 1,
         ]);
+        $this->isSuccessResponse($itemListResult);
         $item = $itemListResult['data']['itemList'][0];
 
         $response = $app->distribution->openDistributionCpsKwaimoneyLinkCreate([

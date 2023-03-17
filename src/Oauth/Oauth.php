@@ -19,13 +19,11 @@ class Oauth extends KwaixiaodianApi
     public function accessToken($code, string $grant_type = 'code'): array
     {
         $config = $this->getConfig();
-        $response = $this->getHttpClient()->request('GET', $this->getBaseUri() . 'oauth2/access_token', [
-            'query' => [
-                'app_id' => $config['app_key'],
-                'app_secret' => $config['app_secret'],
-                'grant_type' => $grant_type,
-                'code' => $code,
-            ],
+        $response = $this->getHttpClient()->get($this->getBaseUri() . 'oauth2/access_token', [
+            'app_id' => $config['app_key'],
+            'app_secret' => $config['app_secret'],
+            'grant_type' => $grant_type,
+            'code' => $code,
         ]);
         return Utils::jsonResponseToArray($response);
     }
@@ -38,13 +36,11 @@ class Oauth extends KwaixiaodianApi
     public function refreshToken($refresh_token): array
     {
         $config = $this->getConfig();
-        $response = $this->getHttpClient()->request('GET', $this->getBaseUri() . 'oauth2/refresh_token', [
-            'query' => [
-                'app_id' => $config['app_key'],
-                'app_secret' => $config['app_secret'],
-                'grant_type' => 'refresh_token',
-                'refresh_token' => $refresh_token,
-            ],
+        $response = $this->getHttpClient()->post($this->getBaseUri() . 'oauth2/refresh_token', [
+            'grant_type' => 'refresh_token',
+            'refresh_token' => $refresh_token,
+            'app_id' => $config['app_key'],
+            'app_secret' => $config['app_secret'],
         ]);
         return Utils::jsonResponseToArray($response);
     }
