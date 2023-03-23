@@ -63,9 +63,9 @@ class KwaixiaodianApi extends FoundationApi
         $params['sign'] = $this->makeSign($params, $config['sign_secret']);
 
         if ($request_method == 'POST') {
-            $response = $this->getHttpClient()->get($this->getUri($method), $params);
-        } else {
             $response = $this->getHttpClient()->post($this->getUri($method), $params);
+        } else {
+            $response = $this->getHttpClient()->get($this->getUri($method), $params);
         }
 
         return Utils::jsonResponseToArray($response);
