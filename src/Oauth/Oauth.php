@@ -11,9 +11,6 @@ use Ydg\KwaixiaodianSdk\Support\Utils;
 class Oauth extends KwaixiaodianApi
 {
     /**
-     * @param $code
-     * @param string $grant_type
-     * @return array
      * @throws GuzzleException
      */
     public function accessToken($code, string $grant_type = 'code'): array
@@ -29,8 +26,6 @@ class Oauth extends KwaixiaodianApi
     }
 
     /**
-     * @param $refresh_token
-     * @return array
      * @throws GuzzleException
      */
     public function refreshToken($refresh_token): array

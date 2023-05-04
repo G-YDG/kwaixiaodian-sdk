@@ -10,7 +10,7 @@ class Utils
 {
     public static function getMsecTime(): string
     {
-        list($t1, $t2) = explode(' ', microtime());
+        [$t1, $t2] = explode(' ', microtime());
         return sprintf('%.0f', (floatval($t1) + floatval($t2)) * 1000);
     }
 

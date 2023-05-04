@@ -6,10 +6,13 @@ use GuzzleHttp\Exception\GuzzleException;
 use Ydg\KwaixiaodianSdk\Kwaixiaodian;
 use YdgTest\AbstractTest;
 
+/**
+ * @internal
+ * @coversNothing
+ */
 class UserTest extends AbstractTest
 {
     /**
-     * @return void
      * @throws GuzzleException
      */
     public function testInfoGet()

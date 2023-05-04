@@ -7,6 +7,10 @@ namespace YdgTest\Api;
 use Ydg\KwaixiaodianSdk\Kwaixiaodian;
 use YdgTest\AbstractTest;
 
+/**
+ * @internal
+ * @coversNothing
+ */
 class DistributionTest extends AbstractTest
 {
     public function testOpenDistributionCpsKwaimoneyPidList()

@@ -7,8 +7,8 @@ namespace Ydg\KwaixiaodianSdk;
 use Ydg\FoudationSdk\ServiceContainer;
 
 /**
- * @property  Api\Distribution\Distribution $distribution
- * @property  Api\User\User $user
+ * @property Api\Distribution\Distribution $distribution
+ * @property Api\User\User $user
  */
 class Kwaixiaodian extends ServiceContainer
 {
